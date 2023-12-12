@@ -9,7 +9,7 @@ const SearchResults = ({ blogPosts, searchQuery }) => {
 
   return (
     <div data-bs-theme="dark">
-      <ul className="list-group">
+      <ul className="list-group text-light">
         {results.length > 0
           ? results.map((blogPost) => (
               <li className="list-group-item">
