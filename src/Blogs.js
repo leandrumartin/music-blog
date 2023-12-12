@@ -1,6 +1,7 @@
 const Blogs = () => {
   return [
     {
+      id: "0",
       title: "Example Post 1",
       albumId: "6Sts4Yh7KsDFwq2yTWrGGV",
       synopsis: "The best jazz album I've heard so far.",
@@ -35,6 +36,7 @@ const Blogs = () => {
     },
 
     {
+      id: "1",
       title: "Example Post 2",
       albumId: "1XoE7ZirQ3gjxq8HIzTJU9",
       synopsis: "Fun all the way through!",

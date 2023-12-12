@@ -1,3 +1,6 @@
+import CommentForm from "./CommentForm";
+import CommentSection from "./CommentSection";
+
 const BlogPostList = ({ blogPosts }) => {
   return (
     <div>
@@ -10,15 +13,19 @@ const BlogPostList = ({ blogPosts }) => {
               class="btn btn-primary"
               type="button"
               data-bs-toggle="collapse"
-              data-bs-target={"#blog-" + blogIndex}
+              data-bs-target={"#blog-" + blogPost.id}
               aria-expanded="false"
               aria-controls="collapseExample"
             >
               Read
             </button>
 
-            <div className="collapse" id={"blog-" + blogIndex}>
-              {blogPost.content}
+            <div className="collapse" id={"blog-" + blogPost.id}>
+              {/* {blogPost.content} */}
+              <iframe
+                src={"./Blogs/blog-" + blogPost.id + ".html"}
+                width={"100%"}
+              ></iframe>
             </div>
           </div>
         </div>
