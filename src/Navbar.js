@@ -4,7 +4,7 @@ import React, { useState } from "react";
 const Navbar = ({ blogPosts }) => {
   const [searchQuery, setSearchQuery] = useState();
   return (
-    <nav className="navbar navbar-expand-lg sticky-top bg-body-tertiary">
+    <nav className="navbar navbar-expand-sm sticky-top bg-body-tertiary">
       <div className="container-fluid">
         <a className="navbar-brand" href="#">
           Leandru's Music Blog
@@ -21,7 +21,10 @@ const Navbar = ({ blogPosts }) => {
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+        <div
+          className="collapse navbar-collapse justify-content-end"
+          id="navbarSupportedContent"
+        >
           <form className="d-flex" role="search">
             <input
               className="form-control me-2"
