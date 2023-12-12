@@ -1,5 +1,3 @@
-import { DiscussionEmbed } from "disqus-react";
-
 const BlogPostList = ({ blogPosts }) => {
   return (
     <div>
@@ -19,7 +17,16 @@ const BlogPostList = ({ blogPosts }) => {
             <h2 className="card-title">{blogPost.title}</h2>
             <p className="card-text">{blogPost.subtitle}</p>
           </div>
+
           <div className="card-body">
+            <a
+              class="btn btn-primary"
+              href={blogPost.path}
+              target="_blank"
+              role="button"
+            >
+              Read in a new tab
+            </a>
             <button
               class="btn btn-primary"
               type="button"
@@ -28,7 +35,7 @@ const BlogPostList = ({ blogPosts }) => {
               aria-expanded="false"
               aria-controls="collapseExample"
             >
-              Read
+              Expand and read
             </button>
             <div className="collapse" id={"blog-content-" + blogPost.id}>
               <iframe
@@ -36,18 +43,14 @@ const BlogPostList = ({ blogPosts }) => {
                 style={{ "min-height": "500px" }}
                 className="w-100 mh-100 my-3"
               ></iframe>
-              <h3>Comments</h3>
-              <DiscussionEmbed
-                shortname="leandrumartin"
-                className="w-75 m-2"
-                config={{
-                  url: "leandrumartin.github.io/music-blog" + blogPost.path,
-                  identifier: blogPost.id,
-                  title: blogPost.title,
-                  language: "en_US",
-                }}
-              />
-
+              <a
+                class="btn btn-primary"
+                href={blogPost.path + "#disqus_thread"}
+                target="_blank"
+                role="button"
+              >
+                Go to comments
+              </a>
               <button
                 class="btn btn-primary"
                 type="button"
@@ -56,7 +59,7 @@ const BlogPostList = ({ blogPosts }) => {
                 aria-expanded="false"
                 aria-controls="collapseExample"
               >
-                Close blog post
+                Collapse blog post
               </button>
             </div>
           </div>
