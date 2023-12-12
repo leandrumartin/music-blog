@@ -2,42 +2,43 @@ const BlogPostList = ({ blogPosts }) => {
   return (
     <div>
       {blogPosts.map((blogPost) => (
-        <div className="card m-3 p-2 shadow-sm">
-          <img
-            src={blogPost.imagePath}
-            alt={blogPost.imageAlt}
-            class="card-img-top text-center"
-            style={{ height: "100px", width: "100px" }}
-          />
-          <div className="card-body">
+        <div className="card m-3 p-2 shadow-sm" id={"blog-" + blogPost.id}>
+          <div className="card-header">
+            {
+              blogPost.imagePath && (
+                <img
+                  src={blogPost.imagePath}
+                  alt={blogPost.imageAlt}
+                  class="card-img-top text-center"
+                  style={{ height: "100px", width: "100px" }}
+                />
+              ) // Show image only if image path exists
+            }
             <h2 className="card-title">{blogPost.title}</h2>
-            <p className="card-text">{blogPost.synopsis}</p>
+            <p className="card-text">{blogPost.subtitle}</p>
+          </div>
+          <div className="card-body">
             <button
               class="btn btn-primary"
               type="button"
               data-bs-toggle="collapse"
-              data-bs-target={"#blog-" + blogPost.id}
+              data-bs-target={"#blog-content-" + blogPost.id}
               aria-expanded="false"
               aria-controls="collapseExample"
             >
               Read
             </button>
-
-            <div className="collapse" id={"blog-" + blogPost.id}>
+            <div className="collapse" id={"blog-content-" + blogPost.id}>
               <iframe
                 src={blogPost.path}
                 style={{ "min-height": "500px" }}
-                // width={"100%"}
-                // height={"100%"}
-                // className="w-100 vh-100"
-                // className="min-h-50"
-                className="w-100 mh-100"
+                className="w-100 mh-100 my-3"
               ></iframe>
               <button
                 class="btn btn-primary"
                 type="button"
                 data-bs-toggle="collapse"
-                data-bs-target={"#blog-" + blogPost.id}
+                data-bs-target={"#blog-content-" + blogPost.id}
                 aria-expanded="false"
                 aria-controls="collapseExample"
               >

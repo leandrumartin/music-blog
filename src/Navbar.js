@@ -4,7 +4,10 @@ import React, { useState } from "react";
 const Navbar = ({ blogPosts }) => {
   const [searchQuery, setSearchQuery] = useState();
   return (
-    <nav className="navbar navbar-expand-sm sticky-top bg-body-tertiary">
+    <nav
+      className="navbar navbar-expand-sm sticky-top bg-body-tertiary"
+      data-bs-theme="dark"
+    >
       <div className="container-fluid">
         <a className="navbar-brand" href="#">
           Leandru's Music Blog
