@@ -20,7 +20,7 @@ const BlogPostList = ({ blogPosts }) => {
 
           <div className="card-body">
             <a
-              class="btn btn-primary"
+              class="btn btn-primary mx-2"
               href={blogPost.path}
               target="_blank"
               role="button"
@@ -28,7 +28,7 @@ const BlogPostList = ({ blogPosts }) => {
               Read in a new tab
             </a>
             <button
-              class="btn btn-primary"
+              class="btn btn-primary mx-2"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target={"#blog-content-" + blogPost.id}
@@ -41,10 +41,10 @@ const BlogPostList = ({ blogPosts }) => {
               <iframe
                 src={blogPost.path}
                 style={{ "min-height": "500px" }}
-                className="w-100 mh-100 my-3"
+                className="w-100 mh-100"
               ></iframe>
               <a
-                class="btn btn-primary"
+                class="btn btn-primary mx-2"
                 href={blogPost.path + "#disqus_thread"}
                 target="_blank"
                 role="button"
@@ -52,7 +52,7 @@ const BlogPostList = ({ blogPosts }) => {
                 Go to comments
               </a>
               <button
-                class="btn btn-primary"
+                class="btn btn-primary mx-2"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target={"#blog-content-" + blogPost.id}
