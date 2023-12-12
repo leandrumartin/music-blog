@@ -36,11 +36,12 @@ const BlogPostList = ({ blogPosts }) => {
                 style={{ "min-height": "500px" }}
                 className="w-100 mh-100 my-3"
               ></iframe>
-
+              <h3>Comments</h3>
               <DiscussionEmbed
                 shortname="leandrumartin"
+                className="w-75 m-2"
                 config={{
-                  url: "leandrumartin.github.io/music-blog",
+                  url: "leandrumartin.github.io/music-blog" + blogPost.path,
                   identifier: blogPost.id,
                   title: blogPost.title,
                   language: "en_US",
