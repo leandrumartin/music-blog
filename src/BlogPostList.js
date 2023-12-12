@@ -41,7 +41,7 @@ const BlogPostList = ({ blogPosts }) => {
               <iframe
                 src={blogPost.path}
                 style={{ "min-height": "500px" }}
-                className="w-100 mh-100"
+                className="w-100 mh-100 my-2"
               ></iframe>
               <a
                 class="btn btn-primary mx-2"
