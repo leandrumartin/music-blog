@@ -1,3 +1,5 @@
+import { DiscussionEmbed } from "disqus-react";
+
 const BlogPostList = ({ blogPosts }) => {
   return (
     <div>
@@ -34,6 +36,17 @@ const BlogPostList = ({ blogPosts }) => {
                 style={{ "min-height": "500px" }}
                 className="w-100 mh-100 my-3"
               ></iframe>
+
+              <DiscussionEmbed
+                shortname="leandrumartin"
+                config={{
+                  url: "leandrumartin.github.io/music-blog",
+                  identifier: blogPost.id,
+                  title: blogPost.title,
+                  language: "en_US",
+                }}
+              />
+
               <button
                 class="btn btn-primary"
                 type="button"
